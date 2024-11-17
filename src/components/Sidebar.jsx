@@ -8,7 +8,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="w-1/4 p-4 ml-4 mt-4 bg-white shadow-md rounded-lg">
+    <div className=" p-4 ml-4 mt-4 bg-white shadow-md rounded-lg h-screen overflow-y-auto">
       <h2 className="text-lg font-semibold mb-4">Filter</h2>
       <Divider my="sm" />
       <div className="mb-6">

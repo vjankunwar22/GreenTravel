@@ -64,6 +64,7 @@ const Activities = () => {
       <div className="hidden md:block">
         <SearchBar />
       </div>
+      
       <div className="md:hidden px-4 py-2">
         <div className="flex flex-col gap-2">
           <input
@@ -94,23 +95,24 @@ const Activities = () => {
         </div>
       </div>
 
-      <div className='flex md:hidden fixed bottom-2 right-2'>
+      <div className='flex md:hidden fixed bottom-2 right-2 z-50'>
           <MobileSidebar/>
       </div>
 
-      <div className="flex flex-1 ">
-        <div className='md:flex hidden'>
-        <Sidebar />
-        </div>
+      <div className='flex flex-1 w-full'>
+        <div className='w-1/4 '>
+          <Sidebar />
+          </div>
+       
+        
 
-        <main className="flex-1 p-4">
+        <main className="w-3/4 flex-1 p-4">
           <h2 className="text-sm font-semibold mb-4">Activities available</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {activities.map((activity, index) => (
               <ActivityCard key={index} {...activity} />
             ))}
           </div>
-        
         </main>
       </div>
     </div>
