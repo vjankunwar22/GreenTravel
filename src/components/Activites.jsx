@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 import ActivityCard from "../components/ActivityCard";
 import img1 from "../assets/image1.jpg";
 import img2 from "../assets/image2.jpg";
 import img3 from "../assets/image3.jpg";
-import Sidebar from './Sidebar';
-import SearchBar from './SearchBar';
-import MobileSidebar from './MobileSidebar';
+import Sidebar from "./Sidebar";
+import SearchBar from "./SearchBar";
+import MobileSidebar from "./MobileSidebar";
 
 const Activities = () => {
   const activities = [
     {
       title: "Balinese Cooking Class",
       location: "Ubud",
-      duration: "2h", 
+      duration: "2h",
       rating: 4.8,
       price: 25,
       imgSrc: img1,
@@ -64,7 +64,7 @@ const Activities = () => {
       <div className="hidden md:block">
         <SearchBar />
       </div>
-      
+
       <div className="md:hidden px-4 py-2">
         <div className="flex flex-col gap-2">
           <input
@@ -77,9 +77,7 @@ const Activities = () => {
               type="date"
               className="p-2 border border-gray-300 rounded-lg flex-1"
             />
-            <select
-              className="p-2 border border-gray-300 rounded-lg flex-1"
-            >
+            <select className="p-2 border border-gray-300 rounded-lg flex-1">
               <option value="">Select activity type</option>
               <option value="crafts">Crafts workshops</option>
               <option value="outdoor">Outdoor adventures</option>
@@ -87,26 +85,22 @@ const Activities = () => {
               <option value="cultural">Cultural tours</option>
             </select>
           </div>
-          <button
-            className="bg-black text-white py-2 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-500"
-          >
+          <button className="bg-black text-white py-2 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-500">
             Search
           </button>
         </div>
       </div>
 
-      <div className='flex md:hidden fixed bottom-2 right-2 z-50'>
-          <MobileSidebar/>
+      <div className="flex md:hidden fixed bottom-2 right-2 z-50">
+        <MobileSidebar />
       </div>
 
-      <div className='flex flex-1 w-full'>
-        <div className='w-1/4 '>
+      <div className="flex flex-1 w-full">
+        <div className="hidden md:block w-1/4">
           <Sidebar />
-          </div>
-       
-        
+        </div>
 
-        <main className="w-3/4 flex-1 p-4">
+        <main className="w-full md:w-3/4 flex-1 p-4">
           <h2 className="text-sm font-semibold mb-4">Activities available</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {activities.map((activity, index) => (

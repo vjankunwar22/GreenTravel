@@ -1,4 +1,4 @@
-import { Checkbox, Divider, Group, HoverCard, ScrollArea, Slider, Text } from '@mantine/core'
+import { Checkbox, Divider, Group, HoverCard, ScrollArea, Slider} from '@mantine/core'
 import React, { useState } from 'react'
 
 const MobileSidebar = () => {
